@@ -1,0 +1,60 @@
+
+/* ----------------------ABOUT SECTION--------------------------- */
+.about{
+    height:500px;
+    background:black;
+}
+
+/* --------------features section--------------- */
+.features{
+    background: black;
+    height: 500px;
+    color:white;
+}
+
+.benefits{
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 30px 0 30px;
+}
+
+.benefits .ben{
+    margin-left:30px;
+    flex:1;
+    height:80%;
+    margin:20px;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.benefits figure img{
+    height:400px;
+    width:auto;
+    margin:20px;
+    max-width:520px;
+}
+
+figcaption{
+    position:relative;
+    top:-80px;
+    text-align:center;
+    color:white;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    padding:15px 0 15px 0;
+
+    font-size:27px;
+    font-weight:650;
+}
+
+
+/* -------------------contact us----------------------- */
+.contact-us{
+    height:300px;
+    background:white;
+}

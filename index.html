@@ -4,10 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Link 360</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <link rel = "stylesheet" href = "styles2.css">
+    <link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    
+    <div class = "header">
+        <!--a href = "index.html"><img class="comp-name" src="images/company-logo.png" alt="Health360Logo"></a-->
+        <div class = "logo-section">
+            <a class = "comp-link" href = "index.html">
+                <img class="comp-name" src="images/company-logo.png" alt="Health link 360 Logo">
+            </a>
+        </div>
+        <nav class = "user-ops" id = "user-ops">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul class = "ops ops1">
+                <li><a href = #>Home</a></li>
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#features">Features</a></li>
+                <li><a href = "#contact-us">Contact Us</a></li>
+            </ul>
+            <ul class="ops applink">
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScttccJ8PI5Enk4kUvnHTGwCkRc0ZFAot2sKq9V2BY7PrkaCQ/viewform" target="_blank" rel="noopener noreferrer">Join Waitlist</a></li>
+            </ul>   
+        </nav>
+    </div>
+    <div class = "ss-header">
+        <h1>HealthLink360</h1>
+        <i class="fa fa-bars" onclick = "showMenu()"></i>
+    </div>
+
+    <div class = "home" id="home">
+        <img src = "images/group-of-black-males.jpg" alt = "African American dad holding his son joyfully">
+        <div class= "home-text">
+            <h1><bold>HealthLink360</bold></h1>
+            <p>Your Link to Better Health</p>
+            <div class= "applink">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScttccJ8PI5Enk4kUvnHTGwCkRc0ZFAot2sKq9V2BY7PrkaCQ/viewform" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "about" id="about">
         
-    </header>
+    </div>
+
+    <div class = "features" id="features">
+        <div class = "benefits">
+            <div class = "ben">
+                <figure>
+                    <img src = "images/AI-circuit-board.jpg" alt = "circuit board with face made out of circuits">
+                    <figcaption>&#10020 Personalized Insights</figcaption>
+                </figure>
+            </div>
+            <div class = "ben">
+                <figure>
+                    <img src = "images/brain-bulb.jpg" alt = "circuit board with face made out of circuits">
+                    <figcaption>&#10020 Predictive Health Data</figcaption>
+                </figure>
+            </div>
+            <div class = "ben">
+                <figure>
+                    <img src = "images/stary-night.jpg" alt = "mand standing before a beautiful stary night on a beach">
+                    <figcaption>&#10020 Explore the Bigger Picture</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class = "contact-us  " id="contact-us">
+         
+    </div>
+
+
+    <!-- ------JavaScript for opening/closing toggle menu----- -->
+    <script>
+        var navLinks = document.getElementById("user-ops");
+
+        function showMenu(){
+            navLinks.style.right = "0px";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+        $(document).ready(function() {
+            $("#about").click(function(e) {
+                e.preventDefault(); // Prevent default link behavior
+                $("html, body").animate({
+                    scrollTop: $($.attr(this, "href")).offset().top
+                }, 1000); // Adjust the duration (in milliseconds) as desired
+            });
+        });
+    </script>
 </body>
 </html>

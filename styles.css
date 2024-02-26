@@ -1,4 +1,325 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    scroll-behavior:smooth;
 }
+
+body{
+    background:black;
+}
+
+.ss-header{
+    display:none;
+}
+
+.header{
+    position:fixed;
+    width:100%;
+    height: 80px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin:0;
+    overflow:hidden;
+    z-index:9999;
+}
+.comp-name{
+    max-width:25%;
+    height:auto;
+}
+
+.logo-section{
+    flex:0.25;
+    margin-left: 20px;
+}
+
+.user-ops{
+    flex:0.75;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.user-ops ul, .home-text .applink{
+    background: white;
+    align-items: center;
+    border-radius:20px;
+    padding: 10px;
+    margin: 0 5px;
+    list-style: none;
+    position: relative;
+}
+
+.user-ops a, .home-text a{
+    text-decoration:none;
+    color: rgb(0, 0, 0);
+    text-align:center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ops1{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    left:34%;
+    transform:translateX(-55%);
+}
+
+.user-ops li{
+    margin: 0 20px;
+}
+
+.user-ops .applink, .home-text .applink{
+    background: black;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); /* Subtle box-shadow */
+}
+.applink a{
+    color: white;
+}
+
+/* Little bar under the links that comes when hovererd */
+.user-ops ul li::after, .home-text .applink::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: rgb(157, 29, 171);
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+}
+
+.user-ops ul li:hover::after{
+    width:100%;
+}
+
+.user-ops .fa, .header.fa{
+    display:none;
+}
+
+/* --------------------HOME SECTION--------------------------- */
+
+.home img{
+    position:fixed;
+    z-index:-1;
+    position:relative;
+    left:-50px;
+    top:-100px;
+    height:210%;
+    width:auto;
+
+    display:block;
+    margin:auto;
+
+    overflow: none;
+}
+
+.home{
+    margin:0;
+    padding:0;
+    height:70vh;
+    padding-top:100px;
+    overflow:none;
+
+    background: linear-gradient(rgba(157, 29, 171,0.4),rgba(157, 29, 171,0.4));
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    max-width:100vw;
+    overflow:hidden;
+}
+
+.home .home-text{
+    flex:1;
+    position:absolute;
+    color:white;
+    text-align:center;
+    top: 220px;
+}
+
+.home-text h1{
+    font-size:100px;
+    letter-spacing:-2px;
+}
+
+.home-text p{
+    font-size:20px;
+    letter-spacing:3px;
+}
+
+.home-text p::after{
+    content:'';
+    width: 55%;
+    height: 1px;
+    background: rgb(235, 231, 236);
+    display: block;
+    margin:auto;
+}
+
+.home-text .applink{
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    top:20px;
+    width:160px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); /* Subtle box-shadow */
+}
+
+.home-text .applink:hover::after{
+    width:80%;
+}
+
+
+.features{
+    background-color:white;
+    height:500px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* breakpoint 1 mid screen */
+@media screen and (max-width: 990px) and (min-width:781px){
+    .comp-name{
+        font-size:35px;
+        margin-left:5px;
+    }
+
+    .user-ops li{
+        margin: 0 15px;
+    }
+
+    .user-ops a{
+        font-size: 16px;
+    }
+
+    .home img{
+        left:-350px;
+        top:-80px;
+    }
+
+    .home img{
+        left:70px;
+    }
+
+}
+
+
+/*---------------------smallest screen size-----------------------*/
+@media screen and (max-width: 780px){
+    body{
+        background: white;
+        overflow:scroll;
+        max-width:100vw;
+    }
+
+    .ss-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        height:65px;
+        margin:0 20px 0 20px;
+        z-index:2;
+    }
+
+    .ss-header .fa{
+        font-size:30px;
+    }
+
+    .ss-header .h1{
+        left:15px;
+        font-weight:1000;
+    }
+
+    .header{
+        all:initial;
+        overflow:hidden;
+    }
+
+    .user-ops .applink a{
+        color:black;
+        font-size:23px;
+    }
+    .comp-name{
+        display:none;
+    }
+
+    .user-ops ul li{
+        display: block;
+        margin-top:15px;
+        padding:10px;
+    }
+    .user-ops .ops1{
+        all:initial;
+    }
+    .user-ops .applink{
+        all:initial;
+    }
+    .user-ops{
+        all:initial;
+        position: fixed;
+        background:rgb(157, 29, 171);
+        width:200px;
+        min-height:100%;
+        top:0;
+        right:-200px;/*important for bring out the navigation menu*/
+        text-align:left;
+        z-index:2;
+
+        transition:1s;
+    }
+
+    .user-ops a{
+        color:white;
+    }
+
+    /*Make the line underneath white*/
+    .user-ops ul li::after{
+        content:'';
+        width: 0%;
+        height: 2px;
+        background: white;
+        display: block;
+        margin:auto;
+        transition: 0.5s;
+    }
+    
+    .user-ops ul li:hover::after{
+        width:100%;
+    }
+
+    .user-ops .fa{
+        display:block;
+        color:white;
+        margin:10px;
+        font-size:22px;
+        cursor:pointer;
+    }
+
+    .user-ops .fa:hover{
+        color:rgb(206, 197, 197);
+    }
+
+    .ss-header .fa:hover{
+        color:rgb(81, 76, 76);
+    }
+    .home-text h1{
+        font-size:80px;
+        letter-spacing:-2px;
+    }
+
+    .about{
+        height:300px;
+    }
+
+   
+}
+
+
